@@ -63,4 +63,10 @@ public class CustomLinkedList {
         }
 
     }
+
+
+    public void deleteAtStart(){
+        head = head.next;
+    }
+
 }
