@@ -7,8 +7,8 @@ public class CustomLinkedList {
     public void insert(int data){
        Node node = new Node();
        node.data = data;
-       node.next = null;
-       if (head ==null){
+       node.next = null;//don't have to do this, it's null by default
+       if (head == null){
         head = node;
        }
        else{
@@ -36,8 +36,31 @@ public class CustomLinkedList {
     public void insertAtStart(int data){
         Node node = new Node();
         node.data = data;
+        node.next = null; //by default
         node.next = head;
         head = node;
     }
 
+    public void insertAtIndex(int index, int data){
+        if(index < 0){
+            System.out.println("No Element Added, Index can't be negative");
+        }
+        else if(index ==0 ){
+            insertAtStart(data);
+        }else{
+            // Node to be added
+            Node node = new Node();
+            node.data = data;
+            node.next = null; //by default
+
+           //Temp Node
+            Node tempNode = head;
+            for(int i=0; i < index-1 ; i++){
+                tempNode = tempNode.next;
+            }
+            node.next = tempNode.next;
+            tempNode.next = node;
+        }
+
+    }
 }
