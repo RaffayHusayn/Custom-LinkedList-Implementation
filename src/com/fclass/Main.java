@@ -6,16 +6,13 @@ public class Main {
 	// write your code here
         CustomLinkedList list = new CustomLinkedList();
         list.show();
+        list.deleteAtIndex(2);
         list.insert(5);
         list.insert(6);
         list.insert(9);
-        System.out.println("printing the first list");
+        list.insertAtIndex(2,50);
         list.show();
-        list.insertAtIndex(2,1000);
-        System.out.println("new list");
-        list.show();
-        list.deleteAtStart();
-        System.out.println("_______________");
+        System.out.println("---------------");
         list.show();
     }
 }

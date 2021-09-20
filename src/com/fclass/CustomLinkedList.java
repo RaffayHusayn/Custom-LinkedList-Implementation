@@ -69,4 +69,20 @@ public class CustomLinkedList {
         head = head.next;
     }
 
+    public void deleteAtIndex(int index){
+        if (index < 0){
+            System.out.println("Index can't be negative; no changes made");
+        }
+        else if (index == 0 ){
+            deleteAtStart();
+        }
+        else {
+            Node tempNode = head;
+            for(int i= 0 ; i<index -1; i++){
+                tempNode = tempNode.next;
+            }
+            Node nodeToRemove = tempNode.next;
+            tempNode.next = nodeToRemove.next;
+        }
+    }
 }
