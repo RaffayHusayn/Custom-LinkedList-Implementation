@@ -7,8 +7,11 @@ public class Main {
 	// write your code here
         CustomLinkedList<String> list = new CustomLinkedList<>();
         list.show();
-        list.insert("Raffay");
-        list.insert("Ayesha");
+        list.insertAtEnd("Raffay");
+        list.insertAtEnd("Ayesha");
+        list.show();
+        list.insertAtStart("Nabia");
+        list.insertAtIndex(2,"Ali");
         list.show();
 //        System.out.println(list.isEmpty());
 //        System.out.println(list.contains(5));
