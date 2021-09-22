@@ -79,6 +79,7 @@ public class CustomLinkedList {
             }
             Node nodeToRemove = tempNode.next;
             tempNode.next = nodeToRemove.next;
+            nodeToRemove = null; // so that it is eligible for garbage collection
         }
 
     }
