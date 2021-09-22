@@ -84,5 +84,11 @@ public class CustomLinkedList {
             Node nodeToRemove = tempNode.next;
             tempNode.next = nodeToRemove.next;
         }
+
+    }
+
+
+    public boolean isEmpty(){
+        return head == null;
     }
 }
