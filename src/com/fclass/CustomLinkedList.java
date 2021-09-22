@@ -35,7 +35,6 @@ public class CustomLinkedList<T> {
     public void insertAtStart(T data) {
         Node<T> node = new Node<>();
         node.data = data;
-        node.next = null; //by default
         node.next = head;
         head = node;
     }
@@ -49,7 +48,6 @@ public class CustomLinkedList<T> {
             // Node to be added
             Node<T> node = new Node<>();
             node.data = data;
-            node.next = null; //by default
 
             //Temp Node
             Node<T> tempNode = head;
@@ -63,26 +61,26 @@ public class CustomLinkedList<T> {
     }
 
 
-//    public void deleteAtStart() {
-//        head = head.next;
-//    }
-//
-//    public void deleteAtIndex(int index) {
-//        if (index < 0) {
-//            System.out.println("Index can't be negative; no changes made");
-//        } else if (index == 0) {
-//            deleteAtStart();
-//        } else {
-//            Node tempNode = head;
-//            for (int i = 0; i < index - 1; i++) {
-//                tempNode = tempNode.next;
-//            }
-//            Node nodeToRemove = tempNode.next;
-//            tempNode.next = nodeToRemove.next;
-//            nodeToRemove = null; // so that it is eligible for garbage collection
-//        }
-//
-//    }
+    public void deleteAtStart() {
+        head = head.next;
+    }
+
+    public void deleteAtIndex(int index) {
+        if (index < 0) {
+            System.out.println("Index can't be negative; no changes made");
+        } else if (index == 0) {
+            deleteAtStart();
+        } else {
+            Node<T> tempNode = head;
+            for (int i = 0; i < index - 1; i++) {
+                tempNode = tempNode.next;
+            }
+            Node<T> nodeToRemove = tempNode.next;
+            tempNode.next = nodeToRemove.next;
+            nodeToRemove = null; // so that it is eligible for garbage collection
+        }
+
+    }
 //
 //    public boolean isEmpty() {
 //        return head == null;

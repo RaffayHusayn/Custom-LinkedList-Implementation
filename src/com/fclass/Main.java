@@ -12,6 +12,11 @@ public class Main {
         list.show();
         list.insertAtStart("Nabia");
         list.insertAtIndex(2,"Ali");
+        System.out.println("-----------------");
+        list.show();
+        list.deleteAtStart();
+        list.deleteAtIndex(2);
+        System.out.println("---------------");
         list.show();
 //        System.out.println(list.isEmpty());
 //        System.out.println(list.contains(5));
