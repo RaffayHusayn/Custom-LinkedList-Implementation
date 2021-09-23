@@ -20,6 +20,11 @@ public class Main {
         list.show();
         System.out.println(list.contains("Raffay"));
         System.out.println(list.isEmpty());
+        list.insertAtIndex(1, "ayesha");
+        list.insertAtIndex(0,"nabia");
+        list.show();
+        list.editAtIndex(3, "new");
+        list.show();
 
     }
 }

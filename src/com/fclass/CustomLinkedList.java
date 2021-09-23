@@ -97,4 +97,13 @@ public class CustomLinkedList<T> {
         }
         return false;
     }
+
+
+    public void editAtIndex(int index, T element){
+        Node<T> tempNode = head;
+        for(int i=0; i<index; i++){
+            tempNode = tempNode.next;
+        }
+        tempNode.data = element;
+    }
 }
