@@ -81,20 +81,20 @@ public class CustomLinkedList<T> {
         }
 
     }
-//
-//    public boolean isEmpty() {
-//        return head == null;
-//    }
-//
-//    public boolean contains(int element) {
-//        Node tempNode = head;
-//        while (tempNode != null) {
-//            if (tempNode.data != element) {
-//                tempNode = tempNode.next;
-//            } else {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
+
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public boolean contains(T element) {
+        Node<T> tempNode = head;
+        while (tempNode != null) {
+            if (tempNode.data != element) {
+                tempNode = tempNode.next;
+            } else {
+                return true;
+            }
+        }
+        return false;
+    }
 }
