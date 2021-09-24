@@ -106,4 +106,16 @@ public class CustomLinkedList<T> {
         }
         tempNode.data = element;
     }
+
+
+    public void removeAll(){
+       Node<T> tempNode = head;
+       Node<T> nextNode  = head ;
+       while(tempNode !=null){
+            nextNode = tempNode.next;
+            tempNode.next = null;
+            tempNode = nextNode;
+       }
+       head = null;
+    }
 }
