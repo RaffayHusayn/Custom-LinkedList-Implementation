@@ -3,7 +3,7 @@ package com.fclass;
 public class CustomLinkedList<T> {
     Node<T> head; //class level object uninitialized is null, boolean is false and number is 0 so head = null
 
-    //insert method
+    //Method used to add an element to the end of the linked list
     public void insertAtEnd(T data) {
         Node<T> node = new Node<>();
         node.data = data;
@@ -19,7 +19,7 @@ public class CustomLinkedList<T> {
         }
     }
 
-
+    // Method used to print all the elements of the linked list
     public void show() {
         Node<T> tempNode = head;
         if (tempNode == null) {
@@ -32,6 +32,7 @@ public class CustomLinkedList<T> {
         }
     }
 
+    //Method used to Add Element at the head of the Linked List
     public void insertAtStart(T data) {
         Node<T> node = new Node<>();
         node.data = data;
@@ -39,6 +40,8 @@ public class CustomLinkedList<T> {
         head = node;
     }
 
+
+    //Method used to Add an Element to a specific Index of the Linked List
     public void insertAtIndex(int index, T data) {
         if (index < 0) {
             System.out.println("No Element Added, Index can't be negative");
@@ -61,6 +64,7 @@ public class CustomLinkedList<T> {
     }
 
 
+    //Method used to Delete the element at the head of the linked list
     public void deleteAtStart() {
         head = head.next;
     }
@@ -82,10 +86,14 @@ public class CustomLinkedList<T> {
 
     }
 
+
+    //Method returns True if the Head of the Linked List is null ie there are no elements in the list
     public boolean isEmpty() {
         return head == null;
     }
 
+
+    // Method returns true if the Linked List contains a specific element
     public boolean contains(T element) {
         Node<T> tempNode = head;
         while (tempNode != null) {
@@ -99,6 +107,7 @@ public class CustomLinkedList<T> {
     }
 
 
+    // Method used to update the value of a specific node of the Linked List
     public void editAtIndex(int index, T element){
         Node<T> tempNode = head;
         for(int i=0; i<index; i++){
@@ -108,6 +117,7 @@ public class CustomLinkedList<T> {
     }
 
 
+    // Method used to make all the nodes of the Linked List null
     public void removeAll(){
        Node<T> tempNode = head;
        Node<T> nextNode  = head ;
