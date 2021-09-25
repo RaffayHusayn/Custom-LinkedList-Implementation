@@ -4,9 +4,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
         CustomLinkedList<Object> list = new CustomLinkedList<>();
-        list.show();
         list.insertAtEnd("Raffay");
         list.insertAtEnd("Ayesha");
         list.show();
@@ -26,7 +24,6 @@ public class Main {
         list.editAtIndex(0, "new");
         list.insertAtIndex(0, 1);
         list.show();
-        System.out.println("TTTTTTTTTTTTTTTTTTTTTTTTTTTTt");
         list.removeAll();
         list.show();
         list.isEmpty();
